@@ -39,7 +39,7 @@ export class FSStorage implements StorageAdapter {
             }
           });
         } else {
-          reject();
+          reject(err || new Error(`${dbname} is not are file`);
         }
       });
     });
